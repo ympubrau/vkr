@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <p>Выберите цвет фона</p>
+        <label for="colorPicker">Цвет:</label>
+        <input type="color" value="#4A98F7" id="colorPicker">
+    </div>
+
+
+    <div>
+        <p>Выберите ширину и высоту полотна</p>
+        <div class="sizePicker">
+            <label for="canvasWidth">Ширина:</label>
+            <input id="canvasWidth" type="text" value="1450">
+        </div>
+        <div class="sizePicker">
+            <label for="canvasHeight">Высота: </label>
+            <input id="canvasHeight" type="text" value="1450">
+        </div>
+    </div>
+
+    <div>
+        <p>Выберите разбиение полотна по вертикали и горизонтали</p>
+        <div class="sizePicker">
+            <label for="amountWidth">Вертикаль:</label>
+            <input id="amountWidth" type="text" value="10">
+        </div>
+        <div class="sizePicker">
+            <label for="amountHeight">Горизонталь: </label>
+            <input id="amountHeight" type="text" value="10">
+        </div>
+    </div>
+
+    <div>
+        <p>Диаметр круга:</p>
+        <span id="minimalDiameter"></span>
+    </div>
+
+    <div>
+        <button onclick="downloadJson()">Скачать файл</button>
+    </div>
+
+    <div>
+        <p>Загрузите json file</p>
+        <input type="file" id="fileUpload" accept=".json">
+    </div>
+
+    <div>
+        <canvas id="canvas" width="300" height="300">
+            <p>Ваш браузер не поддерживает рисование.</p>
+        </canvas>
+    </div>
+
+
+</body>
+<script src="settingsScript.js"></script>
+</html>
